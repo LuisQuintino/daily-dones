@@ -20,4 +20,4 @@ Aplicação WEB com intuito de registrar as tarefas a serem realizadas ou realiz
 ## Tecnologias
 
 - Nuxt.js (Front-End)
-- .Net Core (Back-end)
+- C# (Back-end)
