@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "qKeZcGRGdhGgEjOT6U3H+xfXNHV0s2SqJamIBaZV2Zo=",
+  "Source": "daily-dones-api",
+  "BasePath": "_content/daily-dones-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
