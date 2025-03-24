@@ -26,3 +26,6 @@ Aplicação WEB com intuito de registrar as tarefas a serem realizadas ou realiz
 - Nuxt.js (Front-End)
 - C# (Back-end)
 - MYSQL (Relacional)
+
+## Diagrama Banco de Dados
+![image](https://github.com/user-attachments/assets/661ddc1c-7116-4a43-a44b-9a629e092c16)
