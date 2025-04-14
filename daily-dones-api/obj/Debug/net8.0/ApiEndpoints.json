@@ -1,5 +1,183 @@
 [
   {
+    "ContainingType": "daily_dones_api.Controllers.AuthenticationController",
+    "Method": "Inserir",
+    "RelativePath": "Authentication",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authenticationDTO",
+        "Type": "api_domain.Messaging.Authentication.AuthenticationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "daily_dones_api.Controllers.TagController",
+    "Method": "Inserir",
+    "RelativePath": "Tag/inserir",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tag",
+        "Type": "api_domain.Entidades.Tag",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "daily_dones_api.Controllers.TagController",
+    "Method": "ObterTodasTagsPorUsuario",
+    "RelativePath": "Tag/todas/{codigoUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoUsuario",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[api_domain.Entidades.Tarefa, api-domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "daily_dones_api.Controllers.TagTarefasController",
+    "Method": "ObterTodasTagsPorUsuario",
+    "RelativePath": "TagTarefas/inserir",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tagTarefa",
+        "Type": "api_domain.Entidades.TagTarefa",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[api_domain.Entidades.Tarefa, api-domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "daily_dones_api.Controllers.TagTarefasController",
+    "Method": "Inserir",
+    "RelativePath": "TagTarefas/remover",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tagTarefa",
+        "Type": "api_domain.Entidades.TagTarefa",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "daily_dones_api.Controllers.TarefaController",
+    "Method": "Inserir",
+    "RelativePath": "Tarefa/inserir",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "inserirTarefaRequest",
+        "Type": "api_domain.Messaging.Tarefa.InserirTarefaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "daily_dones_api.Controllers.TarefaController",
+    "Method": "ObterTarefasPorUsuarioRange",
+    "RelativePath": "Tarefa/range/{codigoUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoUsuario",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "DtInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "DtFim",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[api_domain.Entidades.Tarefa, api-domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "daily_dones_api.Controllers.TarefaController",
+    "Method": "ObterTodasTarefasPorUsuario",
+    "RelativePath": "Tarefa/todas/{codigoUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoUsuario",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[api_domain.Entidades.Tarefa, api-domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "daily_dones_api.Controllers.UsuarioController",
     "Method": "ObterTodos",
     "RelativePath": "Usuario",

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("daily-dones-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+183a59e5becd198ece07d61a317e4ab16f7478db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2186fcabc6cc919b8f6f6c48e2c00b81dbf1f36")]
 [assembly: System.Reflection.AssemblyProductAttribute("daily-dones-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("daily-dones-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Luis\\source\\repos\\daily-dones\\daily-dones-api\\daily-dones-api.csproj": {}
+    "C:\\Users\\Luis Quintino\\Source\\Repos\\daily-dones\\daily-dones-api\\daily-dones-api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Luis\\source\\repos\\daily-dones\\api-domain\\api-domain.csproj": {
+    "C:\\Users\\Luis Quintino\\Source\\Repos\\daily-dones\\api-domain\\api-domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luis\\source\\repos\\daily-dones\\api-domain\\api-domain.csproj",
+        "projectUniqueName": "C:\\Users\\Luis Quintino\\Source\\Repos\\daily-dones\\api-domain\\api-domain.csproj",
         "projectName": "api-domain",
-        "projectPath": "C:\\Users\\Luis\\source\\repos\\daily-dones\\api-domain\\api-domain.csproj",
-        "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luis\\source\\repos\\daily-dones\\api-domain\\obj\\",
+        "projectPath": "C:\\Users\\Luis Quintino\\Source\\Repos\\daily-dones\\api-domain\\api-domain.csproj",
+        "packagesPath": "C:\\Users\\Luis Quintino\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Luis Quintino\\Source\\Repos\\daily-dones\\api-domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Luis Quintino\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -43,9 +42,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -54,6 +53,10 @@
             "Dapper": {
               "target": "Package",
               "version": "[2.1.66, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.20, )"
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
@@ -80,25 +83,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Luis\\source\\repos\\daily-dones\\daily-dones-api\\daily-dones-api.csproj": {
+    "C:\\Users\\Luis Quintino\\Source\\Repos\\daily-dones\\daily-dones-api\\daily-dones-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luis\\source\\repos\\daily-dones\\daily-dones-api\\daily-dones-api.csproj",
+        "projectUniqueName": "C:\\Users\\Luis Quintino\\Source\\Repos\\daily-dones\\daily-dones-api\\daily-dones-api.csproj",
         "projectName": "daily-dones-api",
-        "projectPath": "C:\\Users\\Luis\\source\\repos\\daily-dones\\daily-dones-api\\daily-dones-api.csproj",
-        "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luis\\source\\repos\\daily-dones\\daily-dones-api\\obj\\",
+        "projectPath": "C:\\Users\\Luis Quintino\\Source\\Repos\\daily-dones\\daily-dones-api\\daily-dones-api.csproj",
+        "packagesPath": "C:\\Users\\Luis Quintino\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Luis Quintino\\Source\\Repos\\daily-dones\\daily-dones-api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Luis Quintino\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -113,8 +115,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Luis\\source\\repos\\daily-dones\\api-domain\\api-domain.csproj": {
-                "projectPath": "C:\\Users\\Luis\\source\\repos\\daily-dones\\api-domain\\api-domain.csproj"
+              "C:\\Users\\Luis Quintino\\Source\\Repos\\daily-dones\\api-domain\\api-domain.csproj": {
+                "projectPath": "C:\\Users\\Luis Quintino\\Source\\Repos\\daily-dones\\api-domain\\api-domain.csproj"
               }
             }
           }
@@ -127,9 +129,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -138,6 +140,10 @@
             "Dapper": {
               "target": "Package",
               "version": "[2.1.66, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.20, )"
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
@@ -171,7 +177,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

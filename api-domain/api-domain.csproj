@@ -8,7 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Messaging\Tarefa\NovaPasta\**" />
+    <Compile Remove="Repositories\NovaPasta\**" />
+    <EmbeddedResource Remove="Messaging\Tarefa\NovaPasta\**" />
+    <EmbeddedResource Remove="Repositories\NovaPasta\**" />
+    <None Remove="Messaging\Tarefa\NovaPasta\**" />
+    <None Remove="Repositories\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dapper" Version="2.1.66" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.20" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
     <PackageReference Include="MySql.EntityFrameworkCore" Version="9.0.0" />
   </ItemGroup>

@@ -15,5 +15,8 @@ namespace api_domain.Config
 		}
 
 		public DbSet<Usuario> Usuarios { get; set; }
-	}
+        public DbSet<Tarefa> Tarefas { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<TagTarefa> TagTarefas { get; set; }
+    }
 }

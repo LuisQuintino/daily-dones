@@ -1,5 +1,6 @@
 using api_domain.Entidades;
-using api_domain.Services;
+using api_domain.Services.Usuario;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace daily_dones_api.Controllers
@@ -20,12 +21,14 @@ namespace daily_dones_api.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public List<Usuario> ObterTodos()
         {
             return _usuarioService.ObterTodos();
         }
 
         [HttpPost]
+        [Authorize]
         public StatusCodeResult Inserir(Usuario usuario)
         {
             _usuarioService.Inserir(usuario);
@@ -34,7 +37,8 @@ namespace daily_dones_api.Controllers
         }
 
 		[HttpPut]
-		public StatusCodeResult Atualizar(Usuario usuario)
+        [Authorize]
+        public StatusCodeResult Atualizar(Usuario usuario)
 		{
 			_usuarioService.Atualizar(usuario);
 
@@ -42,7 +46,8 @@ namespace daily_dones_api.Controllers
 		}
 
 		[HttpDelete]
-		public StatusCodeResult Deletar(Usuario usuario)
+        [Authorize]
+        public StatusCodeResult Deletar(Usuario usuario)
 		{
 			_usuarioService.Deletar(usuario);
 
