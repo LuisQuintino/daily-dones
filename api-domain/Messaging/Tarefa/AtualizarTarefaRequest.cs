@@ -3,11 +3,12 @@ using api_domain.Entidades.Enumeradores;
 
 namespace api_domain.Messaging.Tarefa
 {
-    public class InserirTarefaRequest
+    public class AtualizarTarefaRequest
     {
-        [JsonIgnore]
-        public Guid CodigoUsuario { get; set; }
+        public Guid CodigoTarefa { get; set; }
         public string Descricao { get; set; }
         public SituacaoTarefa Situacao { get; set; }
+        [JsonIgnore]
+        public Guid CodigoUsuario { get; set; }
     }
 }

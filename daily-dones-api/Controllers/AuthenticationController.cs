@@ -2,6 +2,7 @@
 using api_domain.Messaging.Authentication;
 using api_domain.Services.Login;
 using api_domain.Services.Tag;
+using daily_dones_api.Controllers.Base;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,7 +10,7 @@ namespace daily_dones_api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class AuthenticationController : ControllerBase
+    public class AuthenticationController : ControllerBaseV2
     {
 
         private readonly IAuthenticationService _authenticationService;

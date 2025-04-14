@@ -7,5 +7,6 @@ namespace api_domain.Services.Tarefa
         public List<Entidades.Tarefa> ObterTodasPorUsuario(Guid codigoUsuario);
         public void Inserir(InserirTarefaRequest inserirTarefaRequest);
         public List<Entidades.Tarefa> ObterPorRangeUsuario(Guid codigoUsuario, ObterTarefaPorRangeRequest obterTarefaPorRangeRequest);
+        public void Atualizar(AtualizarTarefaRequest atualizarTarefaRequest);
     }
 }

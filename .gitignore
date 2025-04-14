@@ -131,3 +131,8 @@ dist
 /.vs/daily-dones/FileContentIndex
 /.vs
 /daily-dones-api/.vs/daily-dones-api
+/daily-dones-api/.bin
+/daily-dones-api/obj
+/api-domain/.bin
+/api-domain/obj
+/api-domain/.vs/api-domain

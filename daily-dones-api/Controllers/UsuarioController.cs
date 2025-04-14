@@ -1,5 +1,6 @@
 using api_domain.Entidades;
 using api_domain.Services.Usuario;
+using daily_dones_api.Controllers.Base;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,7 +8,7 @@ namespace daily_dones_api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class UsuarioController : ControllerBase
+    public class UsuarioController : ControllerBaseV2
     {
 
         private readonly IUsuarioService _usuarioService;

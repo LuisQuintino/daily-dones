@@ -7,6 +7,16 @@ namespace api_domain.Services.Tarefa
     {
         public readonly ITarefaRepository _tarefaRepository = tarefaRepository;
 
+        public void Atualizar(AtualizarTarefaRequest atualizarTarefaRequest)
+        {
+            var tarefa = 
+                _tarefaRepository.ObterPorCodigo(atualizarTarefaRequest.CodigoTarefa, atualizarTarefaRequest.CodigoUsuario)
+                ?? throw new Exception("Tarefa não encontrada");
+
+            tarefa.Atualizar(atualizarTarefaRequest);
+            _tarefaRepository.Atualizar(tarefa);
+        }
+
         public void Inserir(InserirTarefaRequest inserirTarefaRequest)
         {
             var tarefa = new Entidades.Tarefa(inserirTarefaRequest);

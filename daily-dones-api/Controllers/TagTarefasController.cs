@@ -1,5 +1,6 @@
 ﻿using api_domain.Entidades;
 using api_domain.Services.TagTarefas;
+using daily_dones_api.Controllers.Base;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,7 +8,7 @@ namespace daily_dones_api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class TagTarefasController : ControllerBase
+    public class TagTarefasController : ControllerBaseV2
     {
 
         private readonly ITagTarefasService _tagTarefasService;

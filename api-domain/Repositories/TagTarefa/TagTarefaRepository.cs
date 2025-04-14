@@ -17,5 +17,14 @@ namespace api_domain.Repositories.TagTarefa
             _context.TagTarefas.Add(tagTarefa);
             _context.SaveChanges();
         }
+
+        public List<Entidades.TagTarefa> ObterTodasPorTarefa(Guid codigoTarefa)
+        {
+            var tagsTarefa = _context.TagTarefas
+                .Where(t => t.CodigoTarefa == codigoTarefa)
+                .ToList();
+
+            return tagsTarefa;
+        }
     }
 }

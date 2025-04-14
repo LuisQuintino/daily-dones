@@ -26,5 +26,11 @@ namespace api_domain.Entidades
             DtSituacao = DateTime.Now;
             CodigoUsuario = inserirTarefaRequest.CodigoUsuario;
         }
+
+        public void Atualizar(AtualizarTarefaRequest atualizarTarefaRequest)
+        {
+            Descricao = atualizarTarefaRequest.Descricao;
+            Situacao = atualizarTarefaRequest.Situacao;
+        }
     }
 }

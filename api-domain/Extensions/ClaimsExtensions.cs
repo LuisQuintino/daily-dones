@@ -15,7 +15,7 @@ namespace api_domain.Extensions
             => new List<Claim>
             {
                 new(ClaimTypes.Email, usuario.Email),
-                new(ClaimTypes.Anonymous, usuario.Codigo.ToString())
+                new("CodigoUsuario", usuario.Codigo.ToString())
 
             };
     }
