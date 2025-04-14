@@ -13,6 +13,11 @@ namespace api_domain.Repositories.Tag
             Context.SaveChanges();
         }
 
+        public Entidades.Tag ObterPorCodigo(Guid codigoTag)
+        {
+            return Context.Tags.Where(x => x.Codigo == codigoTag)?.SingleOrDefault();   
+        }
+
         public List<Entidades.Tag> ObterTodasPorUsuario(Guid codigoUsuario)
         {
             var tagsUsuario = Context.Tags

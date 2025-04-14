@@ -14,6 +14,15 @@ namespace api_domain.Repositories.Tarefa
             this.Context.SaveChanges();
         }
 
+        public List<Entidades.Tarefa> BuscarTarefasUltimaSemana(Guid codigoUsuario)
+        {
+            var tarefas = Context.Tarefas
+                .Where(t => t.CodigoUsuario == codigoUsuario && t.DtInclusao >= DateTime.Now.AddDays(-7))
+                .ToList();
+
+            return tarefas;
+        }
+
         public void Inserir(Entidades.Tarefa tarefa)
         {
             this.Context.Tarefas.Add(tarefa);

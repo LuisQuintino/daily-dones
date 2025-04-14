@@ -4,5 +4,6 @@
     {
         List<Entidades.Tag> ObterTodasPorUsuario(Guid codigoUsuario);
         void Inserir(Entidades.Tag tag);
+        Entidades.Tag ObterPorCodigo(Guid codigoTag);
     }
 }

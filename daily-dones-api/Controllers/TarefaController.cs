@@ -43,6 +43,16 @@ namespace daily_dones_api.Controllers
             return Ok(tarefasUsuario);
         }
 
+        [HttpGet("ultima-semana")]
+        [Authorize]
+        public ActionResult<List<UltimasTarefasResponse>> ObterTarefasUltimaSemana()
+        {
+            var tarefasUsuario =
+                _tarefaService.BuscarTarefasUltimaSemana(ObterCodigoUsuario());
+
+            return Ok(tarefasUsuario);
+        }
+
         [HttpPost("inserir")]
         [Authorize]
         public ActionResult Inserir(InserirTarefaRequest inserirTarefaRequest)

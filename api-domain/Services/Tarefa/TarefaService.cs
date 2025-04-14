@@ -1,20 +1,49 @@
-﻿using api_domain.Messaging.Tarefa;
+﻿using System.Net;
+using api_domain.Messaging.Tarefa;
+using api_domain.Repositories.Tag;
+using api_domain.Repositories.TagTarefa;
 using api_domain.Repositories.Tarefa;
 
 namespace api_domain.Services.Tarefa
 {
-    public class TarefaService(ITarefaRepository tarefaRepository) : ITarefaService
+    public class TarefaService(ITarefaRepository tarefaRepository, ITagTarefaRepository tagTarefaRepository, ITagRepository tagRepository) : ITarefaService
     {
-        public readonly ITarefaRepository _tarefaRepository = tarefaRepository;
+        private readonly ITarefaRepository _tarefaRepository = tarefaRepository;
+        private readonly ITagTarefaRepository _tagTarefaRepository = tagTarefaRepository;
+        private readonly ITagRepository _tagRepository = tagRepository;
 
         public void Atualizar(AtualizarTarefaRequest atualizarTarefaRequest)
         {
-            var tarefa = 
+            var tarefa =
                 _tarefaRepository.ObterPorCodigo(atualizarTarefaRequest.CodigoTarefa, atualizarTarefaRequest.CodigoUsuario)
                 ?? throw new Exception("Tarefa não encontrada");
 
             tarefa.Atualizar(atualizarTarefaRequest);
             _tarefaRepository.Atualizar(tarefa);
+        }
+
+        public List<UltimasTarefasResponse> BuscarTarefasUltimaSemana(Guid codigoUsuario)
+        {
+            var listaTarefas =
+                _tarefaRepository.BuscarTarefasUltimaSemana(codigoUsuario);
+
+            var listaTarefasTags = new List<UltimasTarefasResponse>();
+            foreach (var tarefa in listaTarefas)
+            {
+                var listaTags = new List<Entidades.Tag>();
+                _tagTarefaRepository.ObterTodasPorTarefa(tarefa.Codigo).ForEach(tagTarefa =>
+                {
+                    listaTags.Add(_tagRepository.ObterPorCodigo(tagTarefa.CodigoTag));
+                });
+
+                listaTarefasTags.Add(new UltimasTarefasResponse
+                {
+                    Tags = listaTags,
+                    Tarefa = tarefa
+                });
+            }
+
+            return listaTarefasTags;
         }
 
         public void Inserir(InserirTarefaRequest inserirTarefaRequest)
@@ -25,7 +54,7 @@ namespace api_domain.Services.Tarefa
 
         public List<Entidades.Tarefa> ObterPorRangeUsuario(Guid codigoUsuario, ObterTarefaPorRangeRequest obterTarefaPorRangeRequest)
         {
-            var tarefasUsuario = 
+            var tarefasUsuario =
                 _tarefaRepository.ObterPorRangeUsuario(codigoUsuario, obterTarefaPorRangeRequest);
 
             return tarefasUsuario;
